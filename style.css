@@ -54,6 +54,8 @@ body {
 .navbar-links {
     display: flex;
     gap: 28px;
+    justify-content: center;
+    width: 100%;
 }
 .navbar-link {
     color: var(--gris);
@@ -87,6 +89,18 @@ body {
     max-width: 640px;
     margin: 0 auto 2.5rem auto;
 }
+.main-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 0.8rem;
+    color: var(--blanco);
+    text-shadow: none;
+}
+.lead {
+    font-size: 1.15rem;
+    color: var(--gris-claro);
+    margin-bottom: 2rem;
+}
 .subtitle {
     font-size: 1.5rem;
     font-weight: 700;
@@ -96,11 +110,46 @@ body {
     letter-spacing: 1px;
     text-shadow: none;
 }
-ul {
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.3rem;
+    border-radius: var(--bordes);
+    overflow: hidden;
+    background: #22222b;
+    border: 1.5px solid #2d2d37;
+    box-shadow: 0 2px 8px #18182055;
+}
+.table th, .table td {
+    padding: 0.95em 1.1em;
+    text-align: center;
+}
+.table th {
+    background: #23232c;
     color: var(--blanco);
-    font-size: 1.08rem;
-    line-height: 1.7;
-    margin-top: 0.5em;
+    font-weight: bold;
+    font-size: 1.07em;
+    border-bottom: 1.5px solid #353545;
+}
+.table td {
+    color: var(--blanco);
+    background: #20202a;
+}
+.table tr {
+    border-bottom: 1px solid #23232c;
+}
+.table tbody tr:nth-child(even) {
+    background: #252530;
+}
+.table tbody tr:nth-child(odd) {
+    background: #1b1b22;
+}
+.table tbody tr:last-child {
+    border-bottom: none;
 }
 .btn {
     display: inline-block;
@@ -215,6 +264,14 @@ hr {
     .panel, .panel-small {
         padding: 1.2rem 0.7rem 2.3rem 0.7rem;
     }
+    .table th, .table td {
+        padding: 0.6em 0.4em;
+        font-size: 0.97em;
+    }
+    .main-title {
+        font-size: 1.2rem;
+        word-break: break-word;
+    }
     .subtitle {
         font-size: 1rem;
     }
@@ -225,23 +282,64 @@ hr {
         font-size: 0.96rem;
         padding: 0.45em 1.1em;
     }
+    .navbar-links {
+        justify-content: center;
+        gap: 14px;
+        width: 100%;
+        flex-direction: row;
+        display: flex;
+    }
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .navbar-link {
+        font-size: 1rem;
+        padding: 6px 0;
+        text-align: center;
+    }
 }
 @media (max-width: 640px) {
     .container {
         padding: 0 2vw 35px 2vw;
     }
+    .navbar-links {
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        flex-direction: row;
+        display: flex;
+    }
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
     .navbar-link {
-        padding: 5px 0;
-        font-size: 1.02rem;
+        font-size: 0.99rem;
+        padding: 6px 0;
+        text-align: center;
     }
     .navbar-brand img {
-        height: 36px;
+        height: 33px;
     }
     .panel, .panel-small {
         padding: 0.8rem 0.5rem 1.6rem 0.5rem;
     }
+    .main-title {
+        font-size: 1.1rem;
+    }
     .subtitle {
         font-size: 0.96rem;
+    }
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+    }
+    .table {
+        min-width: 500px;
+        font-size: 0.96em;
     }
     .btn {
         font-size: 0.91rem;
