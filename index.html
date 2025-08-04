@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo comprar | Onyx Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a class="navbar-brand" href="https://latomos-afk.github.io/home/">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/0/07/Fortnite_Crew_2020.png" alt="Fortnite Club Logo">
+            Onyx Store
+        </a>
+        <div class="navbar-links">
+            <a class="navbar-link" href="https://latomos-afk.github.io/home/">Inicio</a>
+            <a class="navbar-link" href="https://latomos-afk.github.io/precios/">Precios</a>
+            <a class="navbar-link active" href="https://latomos-afk.github.io/compra/">Cómo comprar</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" style="margin-top:2.5rem;">
+        <div class="panel panel-small">
+            <h2 class="subtitle">¿Cómo funciona la compra?</h2>
+            <ul style="text-align:left; margin-bottom:1.5rem; padding-left:0.8em; list-style:none;">
+                <li>Elige la cantidad de meses que deseas comprar.</li>
+                <li>Puedes dividir tus meses en varias cuentas como quieras.<br>
+                    <span style="color:#bdbdbd;">Ejemplo: compras 5 meses y puedes usarlos para 1 cuenta con 2 meses y 3 cuentas con 1 mes cada una.</span>
+                </li>
+                <li>Recibes acceso al Club de Fortnite en tu cuenta, con todos los beneficios oficiales.</li>
+                <li>Pago fácil y rápido mediante PayPal, totalmente seguro.</li>
+            </ul>
+            <div class="text-center">
+                <a href="https://discord.com/invite/P7nXdNUYcG" target="_blank" class="btn">Comprar ahora por Discord</a>
+            </div>
+        </div>
+        <div class="panel panel-small" id="faq">
+            <h2 class="subtitle">Preguntas frecuentes</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" onclick="faqToggle(this)">
+                            ¿Cómo recibo los meses del club en mi cuenta?
+                        </button>
+                    </h3>
+                    <div class="accordion-body" style="display:none;">
+                        Dependiendo del método que prefieras, puedes elegir que activemos el Club de Fortnite usando tu propia cuenta de Microsoft (nos pasas tu correo y contraseña) o podemos crear una cuenta nueva nosotros, activamos el club y te entregamos el acceso (correo y contraseña) para que la uses.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" onclick="faqToggle(this)">
+                            ¿Es seguro? ¿Cuánto tarda?
+                        </button>
+                    </h3>
+                    <div class="accordion-body" style="display:none;">
+                        Sí, el proceso es 100% seguro y la activación suele durar entre 4 a 8 horas.
+                    </div>
+                </div>
+            </div>
+            <div class="alert" style="margin-top:2.1rem;">
+                No somos Epic Games ni afiliados oficiales. Solo somos una tienda de reventa y activación.
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr>
+        <p>&copy; 2025 Onyx Store. No afiliado a Epic Games. Todas las imágenes y marcas son propiedad de Epic Games Inc.</p>
+    </footer>
+    <script>
+        function faqToggle(btn) {
+            let panel = btn.parentElement.nextElementSibling;
+            let opened = panel.style.display === "block";
+            document.querySelectorAll('.accordion-body').forEach(b => b.style.display = 'none');
+            document.querySelectorAll('.accordion-button').forEach(b => b.classList.add('collapsed'));
+            if (!opened) {
+                panel.style.display = "block";
+                btn.classList.remove('collapsed');
+            }
+        }
+    </script>
+</body>
+</html>
